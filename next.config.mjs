@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    domains: ['localhost', 'flagcdn.com', 'upload.wikimedia.org'],
+  },
+};
 
 export default nextConfig;
