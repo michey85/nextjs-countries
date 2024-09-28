@@ -3,12 +3,21 @@ import getCountry from '@/services/getCountry';
 import type { Country } from '@/types/Country';
 import { Metadata } from 'next';
 import styles from './page.module.css';
+import getAllCountries from '@/services/getAllCountries';
 
 type Props = {
   params: {
     country: string;
   };
 };
+
+export async function generateStaticParams() {
+  const countries = await getAllCountries();
+
+  return countries.map((country: Country) => ({
+    country: country.name.common,
+  }));
+}
 
 export async function generateMetadata({
   params: { country },
