@@ -1,0 +1,20 @@
+.page {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 80px;
+  gap: 64px;
+  font-family: var(--font-geist-sans);
+}
+
+.content {
+  display: grid;
+  gap: 1rem;
+}
+
+.img {
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
